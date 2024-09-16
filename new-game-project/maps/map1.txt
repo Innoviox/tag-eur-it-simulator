@@ -1,0 +1,13 @@
+Munich,0,0
+Paris,0,10
+London,0,20
+Brussels,10,0
+Edinburgh,10,10
+Dublin,10,20
+Lyon,20,0
+Venice,20,10
+Vienna,20,20
+
+Munich,Paris,1
+Paris,London,2
+Munich,Brussels,2
