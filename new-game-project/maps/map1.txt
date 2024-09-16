@@ -1,12 +1,12 @@
 Munich,0,0
-Paris,0,10
-London,0,20
-Brussels,10,0
-Edinburgh,10,10
-Dublin,10,20
-Lyon,20,0
-Venice,20,10
-Vienna,20,20
+Paris,0,100
+London,0,200
+Brussels,100,0
+Edinburgh,100,100
+Dublin,100,200
+Lyon,200,0
+Venice,200,100
+Vienna,200,200
 
 Munich,Paris,1
 Paris,London,2

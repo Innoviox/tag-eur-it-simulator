@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ar8ecjpflsw"]
+
+[ext_resource type="Script" path="res://route.gd" id="1_c0j6p"]
+[ext_resource type="Script" path="res://track.gd" id="2_jjv3p"]
+[ext_resource type="Script" path="res://train.gd" id="3_yan2c"]
+
+[node name="Route" type="Node2D"]
+script = ExtResource("1_c0j6p")
+
+[node name="Track" type="Node" parent="."]
+script = ExtResource("2_jjv3p")
+
+[node name="Train" type="Node" parent="."]
+script = ExtResource("3_yan2c")
