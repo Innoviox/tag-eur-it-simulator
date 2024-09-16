@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://q1siuw53awpw"]
+
+[ext_resource type="Script" path="res://city.gd" id="1_ee68d"]
+
+[node name="City" type="Node2D"]
+script = ExtResource("1_ee68d")
+metadata/name = "Munich"
+metadata/x = 0
+metadata/y = 0
