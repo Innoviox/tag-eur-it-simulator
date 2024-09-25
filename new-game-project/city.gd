@@ -8,6 +8,9 @@ var Y: int
 func _ready() -> void:
 	position.x = X
 	position.y = Y
+	
+	var rtl = get_node("RichTextLabel")
+	rtl.text = city
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,5 +1,7 @@
 extends Node2D
 
+var cities: Array
+var stopTimes: Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

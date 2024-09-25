@@ -4,6 +4,7 @@ extends Node
 @export var route_scene: PackedScene = preload("res://route.tscn")
 
 var map = "res://maps/map1.txt"
+var time = 0 # game starts at midnight
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,15 +22,18 @@ func _ready() -> void:
 			
 			var cityNode = city_scene.instantiate()
 			cityNode.city = city[0]
-			cityNode.X = city[1]
-			cityNode.Y = city[2]
+			cityNode.X = int(city[1]) + 100
+			cityNode.Y = int(city[2]) + 100
 			
 			add_child(cityNode)
 		else:
 			var train = line.split(",")
 			
 			var trainNode = route_scene.instantiate()
+			trainNode.cities = [train[0], train[1]]
+			trainNode.stopTimes = [train[2], train[3]]
 			
+			add_child(trainNode)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
