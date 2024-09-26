@@ -1,3 +1,4 @@
+class_name City
 extends Node2D
 
 var city: String
@@ -9,7 +10,7 @@ func _ready() -> void:
 	position.x = X
 	position.y = Y
 	
-	var rtl = get_node("RichTextLabel")
+	var rtl = $RichTextLabel
 	rtl.text = city
 
 

@@ -5,6 +5,7 @@ extends Node
 
 var map = "res://maps/map1.txt"
 var time = 0 # game starts at midnight
+var cities = {} # name to object
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,15 +26,17 @@ func _ready() -> void:
 			cityNode.X = int(city[1]) + 100
 			cityNode.Y = int(city[2]) + 100
 			
+			cities[cityNode.city] = cityNode
+			
 			add_child(cityNode)
 		else:
-			var train = line.split(",")
+			var route = line.split(",")
 			
-			var trainNode = route_scene.instantiate()
-			trainNode.cities = [train[0], train[1]]
-			trainNode.stopTimes = [train[2], train[3]]
+			var routeNode = route_scene.instantiate()
+			routeNode.cities = [cities[route[0]], cities[route[1]]]
+			routeNode.stopTimes = [route[2], route[3]]
 			
-			add_child(trainNode)
+			add_child(routeNode)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
